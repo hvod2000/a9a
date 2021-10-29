@@ -1,0 +1,7 @@
+node = dir | link | exe | file
+dir = "/" NAME "/\n" nodes "\\\n"
+link = "@" NAME "/" lines
+exe = "!" NAME "/" lines
+file = ":" NAME "/" lines
+nodes = {node}
+lines = {"\n " LINE} "\n\\" LINE "\n"
