@@ -1,0 +1,7 @@
+/dir/        directory
+:txt/        simple file
+!exe/        executable
+@lnk/        soft link
+ cnt         content of a file
+\eof         last line of content of file
+\            end of directory list
