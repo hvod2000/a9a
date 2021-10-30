@@ -1,6 +1,7 @@
 import a9a.encoder
 import a9a.decoder
 import a9a.dir_reader
+import a9a.dir_writer
 
 
 class Archive:
@@ -19,6 +20,9 @@ class Archive:
     def from_bytes(bts):
         assert bts[:4] == b"a9a\n"
         return Archive(decoder.decode_nodes(bts[4:])[0])
+
+    def to_directory(self, dir_path):
+        return dir_writer.write_directory(dir_path, self.content)
 
     @staticmethod
     def from_directory(dir_path):
