@@ -1,11 +1,11 @@
 import setuptools
 
-with open("readme.md", "r") as f:
+with open("../readme.md", "r") as f:
     long_description = f.read()
 
 setuptools.setup(
     name="a9a",
-    version="0.0.1",
+    version="0.0.2",
     author="Uladzislau Khamkou",
     description="a9a archivator",
     long_description=long_description,
