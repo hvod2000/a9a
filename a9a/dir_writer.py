@@ -38,7 +38,7 @@ def write_executable(path, content):
     path = pathlib.Path(path)
     with open(path, "wb") as f:
         f.write(content)
-    path.chmod(path.stat().st_mode | stat.S_IEXEC)
+    path.chmod(path.stat().st_mode | stat.S_IXUSR | stat.S_IXOTH | stat.S_IXGRP)
 
 
 def write_file(path, content):

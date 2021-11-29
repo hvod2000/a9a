@@ -15,10 +15,10 @@ def read_node(path):
     if not path.is_file():
         assert False
     mode = path.stat().st_mode
-    mode, x0 = divmod(mode, 8)
-    mode, x1 = divmod(mode, 8)
-    mode, x2 = divmod(mode, 8)
-    if x0 & x1 & x2 & 1:
+    mode, o = divmod(mode, 8)
+    mode, g = divmod(mode, 8)
+    mode, u = divmod(mode, 8)
+    if u & 1:
         return read_executable(path)
     return read_file(path)
 
