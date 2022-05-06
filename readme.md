@@ -1,3 +1,4 @@
+*DISCONTINUED: now I use [a7d8473](https://github.com/hvod2000/a7d8473)*
 # a9a
 a9a is a simple archive format, that stores archived data in plain text files.
 It can store files, directories, a little meta information about them.
